@@ -15,8 +15,7 @@ LOCK TABLES `friend_table` WRITE;
 
 INSERT INTO `friend_table` VALUES (1,'Tung','05/20/1999','TSU','N/A','single'),
 (2,'Thao','04/12/1998','TSU','N/A','single'),
-(3,'Claire','04/28/1998','TSU','+1 314-285-3850','single'),
-(4,'Thu','11/23/1998','TSU ','+1 360-473-7534','single');
+(3,'Thu','11/23/1998','TSU ','+1 360-473-7534','single');
 
 ALTER TABLE `friend_table` ENABLE KEYS ;
 UNLOCK TABLES;
