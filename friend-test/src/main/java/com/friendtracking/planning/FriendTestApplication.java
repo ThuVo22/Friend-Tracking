@@ -18,11 +18,6 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
-@SpringBootApplication
-@EnableAutoConfiguration(exclude = { //
-        DataSourceAutoConfiguration.class, //
-        DataSourceTransactionManagerAutoConfiguration.class, //
-        HibernateJpaAutoConfiguration.class })
 public class FriendTestApplication {
     
     @Autowired
@@ -46,7 +41,7 @@ public class FriendTestApplication {
 	 
 	        return dataSource;
 	    }
-	 
+  	 
 	    @Autowired
 	    @Bean(name = "sessionFactory")
 	    public SessionFactory getSessionFactory(DataSource dataSource) throws Exception {

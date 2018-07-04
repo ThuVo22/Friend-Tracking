@@ -14,6 +14,9 @@ import com.friendtracking.planning.entities.FriendTestEntity;
 @Repository
 @Transactional
 public class FriendTestDAO {
+    
+
+
     @Autowired
     private SessionFactory sessionFactory;
 

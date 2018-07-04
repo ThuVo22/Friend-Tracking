@@ -14,6 +14,8 @@ import com.friendtracking.planning.entities.FriendTestEntity;
 
 @Controller
 public class HomeController {
+    
+    
     @Autowired
     private FriendTestDAO friendTestDAO;
     
@@ -27,4 +29,6 @@ public class HomeController {
     public @ResponseBody List<FriendTestEntity> search(Model model, String name) {
         return friendTestDAO.getName(name);
     }
+    
+    
 }
