@@ -26,8 +26,8 @@ public class HomeController {
     }
     
     @PostMapping("/")
-    public @ResponseBody List<FriendTestEntity> searchSchool(Model model, String school) {
-        return friendTestDAO.getSchool(school);
+    public @ResponseBody List<FriendTestEntity> searchSchool(Model model, String name) {
+        return friendTestDAO.getName(name);
     }
     
 //    public @ResponseBody List<FriendTestEntity> searchName(Model model, String name) {

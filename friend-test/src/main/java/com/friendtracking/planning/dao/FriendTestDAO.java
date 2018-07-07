@@ -20,21 +20,14 @@ public class FriendTestDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public List<FriendTestEntity> getSchool(String school) {
+
+    public List<FriendTestEntity> getName(String name) {
         Session session = null;
         session = sessionFactory.getCurrentSession();
-        String sql = "from FriendTestEntity e where e.school like :school";
+        String sql = "from FriendTestEntity e where e.name like :name";
 
-        return session.createQuery(sql, FriendTestEntity.class).setParameter("school", "%" + school + "%").getResultList();
+        return session.createQuery(sql, FriendTestEntity.class).setParameter("name", "%" + name + "%").getResultList();
     }
-    
-//    public List<FriendTestEntity> getName(String name) {
-//        Session session = null;
-//        session = sessionFactory.getCurrentSession();
-//        String sql = "from FriendTestEntity e where e.name like :name";
-//
-//        return session.createQuery(sql, FriendTestEntity.class).setParameter("name", "%" + name + "%").getResultList();
-//    }
 
     public List<FriendTestEntity> getAll() {
         Session session = null;
