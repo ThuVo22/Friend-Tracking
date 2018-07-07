@@ -17,9 +17,13 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
-
+@SpringBootApplication
+@EnableAutoConfiguration(exclude = { //
+        DataSourceAutoConfiguration.class, //
+        DataSourceTransactionManagerAutoConfiguration.class, //
+        HibernateJpaAutoConfiguration.class })
 public class FriendTestApplication {
-    
+   
     @Autowired
     private Environment env;
     

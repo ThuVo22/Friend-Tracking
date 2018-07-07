@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "friendtest")
+@Table(name = "friend_table")
 public class FriendTestEntity {
 
     @Id
@@ -18,8 +18,16 @@ public class FriendTestEntity {
     private Integer id;
     @Column(name = "name")
     private String name;
-    @Column(name = "age")
-    private Integer age;
+    @Column(name = "birthday")
+    private String age;
+    @Column(name = "school")
+    private String school;
+    @Column(name = "cellphone")
+    private String cellphone;
+    @Column(name = "status")
+    private String status;
+   
+    
     /**
      * @return the id
      */
@@ -47,15 +55,33 @@ public class FriendTestEntity {
     /**
      * @return the age
      */
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
     /**
      * @param age the age to set
      */
-    public void setAge(Integer age) {
+    public void setAge(String age) {
         this.age = age;
     }
     
+    public String getSchool() {
+        return school;
+    }
+    public void setSchool(String school) {
+        this.school = school;
+    }
+    public String getCellphone() {
+        return cellphone;
+    }
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
 }
